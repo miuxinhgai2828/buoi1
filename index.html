@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container"><h1>Mini Task Manager</h1><p>Bài kiểm tra thực hành HTML, CSS, JavaScript</p></div>
+  </header>
+  <main class="container">
+    <section class="panel">
+      <h2>Thêm công việc</h2>
+      <form id="task-form">
+        <div class="form-grid">
+          <div class="field field-wide">
+            <label for="tencongviec">Tên công việc *</label>
+            <input id="tencongviec" name="tencongviec" type="text"
+            placeholder="Nhập tên công việc" required>
+          </div>
+          <div class="field">
+            <label for="hanhoanthanh"> Hạn hoàn thành </label>
+            <input id="hanhoanthanh" name="hanhoanthanh" type="date">
+          </div>
+          <div class="field">
+            <label for="mucuutien">Mức ưu tiên</label>
+            <select id="mucuutien" name="mucuutien">
+              <option value="Cao">Cao</option>
+              <option value="Trung bình" selected>Trung bình</option>
+              <option value="Thấp">Thấp</option>
+            </select>
+          </div>
+        </div>
+        <button class="nutThem" type="submit">Thêm</button>
+        <p id="form-message" class="form-message"></p>
+      </form>
+    </section>
+    <section class="panel">
+      <div class="toolbar">
+        <div class="field search-field">
+          <input id="search" type="search" placeholder="Tìm kiếm">
+        </div>
+        <div class="field filter-field">
+          <label for="trangthai">Trạng thái</label>
+          <select id="trangthai">
+            <option value="tatca">Tất cả</option>
+            <option value="chuahoanthanh">Chưa hoàn thành</option>
+            <option value="dahoanthanh">Đã hoàn thành</option>
+          </select>
+        </div>
+      </div>
+    </section>
+    <section class="panel">
+      <h2>Danh sách công việc</h2>
+      <div id="danhsachcongviec" class="task-list"></div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      Họ tên: <strong>Bùi Mai Phương</strong>
+      MSV: <strong>224001743</strong>
+    </div>
+  </footer>
+</body>
+</html>
